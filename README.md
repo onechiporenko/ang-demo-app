@@ -28,6 +28,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 Run `ng lint` to execute code linting via [TSLint](https://palantir.github.io/tslint/).
 
-## Further help
+## Useful links
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* [NodeJS](https://nodejs.org)
+* [Node Versions Manager](https://github.com/nvm-sh/nvm)
+* [Angular Docs](https://angular.io)
+* [Angular CLI Docs](https://cli.angular.io)
+* [TypeScript Docs](https://www.typescriptlang.org/)
+* [RXJS](https://rxjs.dev/)
+* [NGRX Docs](https://ngrx.io)
+* [NGX Bootstrap Docs](https://valor-software.com/ngx-bootstrap/)
+* [Twitter Bootstrap Docs](https://getbootstrap.com)
+* [Mock Server Docs](https://github.com/typicode/json-server)
