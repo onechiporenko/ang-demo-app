@@ -8,8 +8,11 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { ConfirmationModalComponent } from './modals/confirmation-modal/confirmation-modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ManageHeroComponent } from './manage-hero/manage-hero.component';
 import { ManageBookComponent } from './manage-book/manage-book.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -19,7 +22,6 @@ import { ManageBookComponent } from './manage-book/manage-book.component';
     HeroDetailsComponent,
     BookDetailsComponent,
     ConfirmationModalComponent,
-    ManageHeroComponent,
     ManageBookComponent
   ],
   exports: [
@@ -27,13 +29,18 @@ import { ManageBookComponent } from './manage-book/manage-book.component';
     HeroesListComponent,
     HeroDetailsComponent,
     BookDetailsComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    ManageBookComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     PipesModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule,
+    AlertModule,
+    ModalModule.forRoot()
   ]
 })
 export class ComponentsModule { }

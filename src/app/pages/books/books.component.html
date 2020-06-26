@@ -1,2 +1,4 @@
-<h1>Books</h1>
+<h2>Books <a class="btn btn-link" [routerLink]="'/books/create'">
+  <fa-icon [icon]="faPlus"></fa-icon>
+</a></h2>
 <app-books-list [books]="books$ | async" (deleteBook)="onDeleteBook($event)"></app-books-list>

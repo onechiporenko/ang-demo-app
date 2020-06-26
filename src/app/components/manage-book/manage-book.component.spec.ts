@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageBookComponent } from './manage-book.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('ManageBookComponent', () => {
   let component: ManageBookComponent;
@@ -8,6 +10,10 @@ describe('ManageBookComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        NgMultiSelectDropDownModule,
+        ReactiveFormsModule
+      ],
       declarations: [ ManageBookComponent ]
     })
     .compileComponents();

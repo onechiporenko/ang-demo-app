@@ -1,4 +1,4 @@
-<h2>{{book.name}}</h2>
+<h2>{{book.name}} <a [routerLink]="['/books/', book.id, 'edit']"><fa-icon [icon]="faEdit"></fa-icon></a></h2>
 <h4>Description:</h4>
 <p>{{book.description}}</p>
 <h4>Heroes:</h4>

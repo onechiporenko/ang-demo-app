@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Book } from '../../models/book.model';
 import { select, Store } from '@ngrx/store';
 import { getBooksWithHeroes } from '../../selectors/book.selector';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-books',
@@ -11,6 +12,8 @@ import { getBooksWithHeroes } from '../../selectors/book.selector';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+
+  faPlus = faPlus;
 
   books$: Observable<Book[]>;
 

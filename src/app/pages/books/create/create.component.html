@@ -1,1 +1,2 @@
-<p>create works!</p>
+<h2>Create new book</h2>
+<app-manage-book [heroes]="heroes$ | async" (saveBook)="onSaveBook($event)"></app-manage-book>

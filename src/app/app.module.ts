@@ -19,6 +19,9 @@ import { ComponentsModule } from './components/components.module';
 import { PipesModule } from './pipes/pipes.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     EntityDataModule.forRoot(entityConfig),
     RouterModule.forRoot(routes),
     ModalModule.forRoot(),
+    AlertModule.forRoot(),
+    NgMultiSelectDropDownModule.forRoot(),
     PagesModule,
     ComponentsModule,
     HttpClientModule,
     PipesModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

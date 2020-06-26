@@ -1,1 +1,44 @@
-<p>manage-book works!</p>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input id="name" class="form-control" type="text" formControlName="name"
+           [class.is-invalid]="bookForm.get('name').invalid && bookForm.get('name').touched">
+    <div *ngIf="bookForm.get('name').touched && bookForm.get('name').invalid" class="invalid-feedback">
+      <span *ngIf="bookForm.get('name').errors.required">Name is required.</span>
+      <span *ngIf="bookForm.get('name').errors.minlength">
+        Name should be at least {{bookForm.get('name').errors.minlength.requiredLength}}
+        symbols (you put {{bookForm.get('name').errors.minlength.actualLength}}).
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" class="form-control" formControlName="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="heroes">Heroes:</label>
+    <ng-multiselect-dropdown
+      [settings]="multiSelectSettings"
+      id="heroes"
+      name="heroes"
+      [data]="heroes"
+      formControlName="heroes"
+      (onSelect)="addHero($event)"
+      (onDeSelect)="removeHero($event)"
+      (onDropDownClose)="onHeroesDropDownClose()"
+    >
+    </ng-multiselect-dropdown>
+
+    <!-- Hack to show validation message for custom component -->
+    <div class="form-control invisible" [class.is-invalid]="bookForm.get('heroes').touched && bookForm.get('heroes').invalid"></div>
+
+    <div *ngIf="bookForm.get('heroes').invalid" class="invalid-feedback">
+      <span *ngIf="bookForm.get('heroes').errors.required">
+        You should select at least 1 hero.
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit" [disabled]="bookForm.invalid">Submit</button>
+  </div>
+</form>

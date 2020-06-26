@@ -5,7 +5,7 @@ import { BooksComponent } from '../pages/books/books.component';
 import { BookComponent } from '../pages/books/book/book.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { EditBookComponent } from '../pages/books/book/edit/edit.component';
-import { EditHeroComponent } from '../pages/heroes/hero/edit/edit.component';
+import { CreateBookComponent } from '../pages/books/create/create.component';
 
 export const routes: Routes = [
   {
@@ -22,17 +22,7 @@ export const routes: Routes = [
       },
       {
         path: ':id',
-        children: [
-          {
-            path: '',
-            component: HeroComponent
-          },
-          {
-            path: 'edit',
-            pathMatch: 'full',
-            component: EditHeroComponent
-          }
-        ]
+        component: HeroComponent
       }
     ]
   },
@@ -42,6 +32,11 @@ export const routes: Routes = [
       {
         path: '',
         component: BooksComponent
+      },
+      {
+        path: 'create',
+        pathMatch: 'full',
+        component: CreateBookComponent
       },
       {
         path: ':id',

@@ -7,10 +7,9 @@ import { BookComponent } from './books/book/book.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { EditHeroComponent } from './heroes/hero/edit/edit.component';
 import { EditBookComponent } from './books/book/edit/edit.component';
-import { CreateHeroComponent } from './heroes/create/create.component';
 import { CreateBookComponent } from './books/create/create.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -20,15 +19,14 @@ import { CreateBookComponent } from './books/create/create.component';
     BooksComponent,
     BookComponent,
     NotFoundComponent,
-    EditHeroComponent,
     EditBookComponent,
-    CreateHeroComponent,
     CreateBookComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    FontAwesomeModule
   ]
 })
 export class PagesModule {

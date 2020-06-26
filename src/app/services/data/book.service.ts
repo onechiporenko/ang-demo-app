@@ -8,6 +8,7 @@ import { Book } from '../../models/book.model';
 
 @Injectable()
 export class BookDataService extends DefaultDataService<Book> {
+
   constructor(http: HttpClient,
               httpUrlGenerator: HttpUrlGenerator,
               config: DefaultDataServiceConfig) {
