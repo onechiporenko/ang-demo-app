@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let hero of heroes">
+    <a [routerLink]="['/heroes', hero.id]">{{hero.name}}</a>
+    <button *ngIf="actionable" type="button" class="btn btn-link" (click)="onDeleteHero(hero)">
+      <fa-icon [icon]="faTrashAlt"></fa-icon>
+    </button>
+  </li>
+</ul>

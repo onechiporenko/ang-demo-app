@@ -1,0 +1,7 @@
+<h2>{{hero.name}}</h2>
+<h4>Age:</h4>
+<p>{{hero.age | yearsOld}}</p>
+<h4>Bio:</h4>
+<p>{{hero.bio}}</p>
+<h4>Books:</h4>
+<app-books-list [books]="hero.books" [actionable]="false"></app-books-list>

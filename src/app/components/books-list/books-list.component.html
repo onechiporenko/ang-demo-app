@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let book of books">
+    <a [routerLink]="['/books/', book.id]">"{{book.name}}"</a> <button *ngIf="actionable" type="button" class="btn btn-link" (click)="onDeleteBook(book)">Delete</button>
+  </li>
+</ul>
